@@ -1,6 +1,6 @@
 {
   "name": "autofit-canvas",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Fit image into HTML canvas depends on image's aspect ratio and orientation",
   "main": "dist/bundle.min.cjs",
   "type": "module",

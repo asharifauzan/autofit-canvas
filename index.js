@@ -14,7 +14,7 @@ const Canvas = (imgHTML, dimension) => {
   );
 
   const outputDimension = {
-    width: img.height * scalingTime,
+    width: img.width * scalingTime,
     height: img.height * scalingTime,
   };
   const outputAxis = {
