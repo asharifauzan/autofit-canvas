@@ -1,33 +1,35 @@
-const Canvas = (imgHTML, dimension) => {
-  const img = imgHTML;
-
+const Canvas = (imgHTML, canvasDimension) => {
+  // initiate canvas
   const canvas = document.createElement('canvas');
-  canvas.width = dimension.width;
-  canvas.height = dimension.height;
+  canvas.width = canvasDimension.width;
+  canvas.height = canvasDimension.height;
   const ctx = canvas.getContext('2d');
 
-  const hRatio = dimension.width / img.width;
-  const vRatio = dimension.height / img.height;
-  const scalingTime = Math.min(
-    hRatio,
-    vRatio,
-  );
+  const img = imgHTML;
 
-  const outputDimension = {
-    width: img.width * scalingTime,
-    height: img.height * scalingTime,
+  // find img ratio based on narrow side
+  const hRatio = canvas.width / img.width;
+  const vRatio = canvas.height / img.height;
+  const scale = Math.min(hRatio, vRatio);
+
+  // scaling up/down image
+  const newImgDimension = {
+    width: img.width * scale,
+    height: img.height * scale,
   };
-  const outputAxis = {
-    x: (dimension.width - outputDimension.width) / 2,
-    y: (dimension.height - outputDimension.height) / 2,
+
+  // centering image on canvas
+  const newImgAxis = {
+    x: (canvas.width - newImgDimension.width) / 2,
+    y: (canvas.height - newImgDimension.height) / 2,
   };
 
   ctx.drawImage(
     img,
-    outputAxis.x,
-    outputAxis.y,
-    outputDimension.width,
-    outputDimension.height,
+    newImgAxis.x,
+    newImgAxis.y,
+    newImgDimension.width,
+    newImgDimension.height,
   );
 
   return canvas;
