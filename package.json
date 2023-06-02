@@ -1,0 +1,21 @@
+{
+  "name": "autofit-canvas",
+  "version": "0.0.1",
+  "description": "Fit image into HTML canvas depends on image's aspect ratio and orientation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asharifauzan/autofit-canvas.git"
+  },
+  "keywords": [
+    "autofit canvas",
+    "image autofit on canvas",
+    "HTML5 canvas"
+  ],
+  "author": "Fauzan Hibatullah Ashari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asharifauzan/autofit-canvas/issues"
+  },
+  "homepage": "https://github.com/asharifauzan/autofit-canvas#readme"
+}
