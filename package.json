@@ -1,8 +1,11 @@
 {
   "name": "autofit-canvas",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Fit image into HTML canvas depends on image's aspect ratio and orientation",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asharifauzan/autofit-canvas.git"
@@ -17,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/asharifauzan/autofit-canvas/issues"
   },
-  "homepage": "https://github.com/asharifauzan/autofit-canvas#readme"
+  "homepage": "https://github.com/asharifauzan/autofit-canvas#readme",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb": "^19.0.4"
+  }
 }
